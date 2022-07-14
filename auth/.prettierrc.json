@@ -1,6 +1,6 @@
 {
-  "arrowParens": "avoid",
-  "bracketSpacing": false,
+  "arrowParens": "always",
+  "bracketSpacing": true,
   "insertPragma": false,
   "bracketSameLine": false,
   "jsxSingleQuote": false,
@@ -12,5 +12,5 @@
   "tabWidth": 2,
   "trailingComma": "all",
   "useTabs": false,
-  "objectCurlySpacing": false
+  "objectCurlySpacing": true
 }
