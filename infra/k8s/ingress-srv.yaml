@@ -14,13 +14,13 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: auth-svc
+                name: auth-srv
                 port:
                   number: 3000
           - path: /?(.*)
             pathType: Prefix
             backend:
               service:
-                name: client-svc
+                name: client-srv
                 port:
                   number: 3000

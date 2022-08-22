@@ -21,7 +21,7 @@ items:
   - apiVersion: v1
     kind: Service
     metadata:
-      name: client-svc
+      name: client-srv
     spec:
       ports:
         - port: 3000
