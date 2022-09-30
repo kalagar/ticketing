@@ -23,6 +23,7 @@
     "require-jsdoc": "off",
     "no-unused-vars": "warn",
     "space-before-function-paren": "off",
-    "no-invalid-this": "warn"
+    "no-invalid-this": "warn",
+    "operator-linebreak": "off"
   }
 }
