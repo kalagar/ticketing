@@ -19,7 +19,7 @@
     "indent": "off",
     "array-bracket-spacing": "off",
     "object-curly-spacing": "off",
-    "max-len": "warn",
+    "max-len": "off",
     "require-jsdoc": "off",
     "no-unused-vars": "warn",
     "space-before-function-paren": "off",
