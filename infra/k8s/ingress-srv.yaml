@@ -24,6 +24,13 @@ spec:
                 name: tickets-srv
                 port:
                   number: 3000
+          - path: /api/orders/?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: orders-srv
+                port:
+                  number: 3000
           # this should be the last path because it is the client, and it will catch all
           - path: /?(.*)
             pathType: Prefix
