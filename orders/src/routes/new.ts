@@ -69,6 +69,7 @@ router.post(
       status: order.status,
       userId: order.userId,
       expiresAt: order.expiresAt.toISOString(),
+      version: order.version,
     });
     res.status(201).send(order);
   },
