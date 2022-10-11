@@ -1,11 +1,12 @@
 import { Ticket } from '../../models/ticket';
-import { signinHelper } from '../../test/authHelper';
+import { generateId, signinHelper } from '../../test/authHelper';
 import request from 'supertest';
 import app from '../../app';
 
 it('should fetches order', async () => {
   // Create three tickets
   const ticket = Ticket.build({
+    id: generateId(),
     title: 'concert',
     price: 20,
   });
@@ -31,6 +32,7 @@ it('should fetches order', async () => {
 it('should returns an error if one user tries to fetch another user order', async () => {
   // Create three tickets
   const ticket = Ticket.build({
+    id: generateId(),
     title: 'concert',
     price: 20,
   });

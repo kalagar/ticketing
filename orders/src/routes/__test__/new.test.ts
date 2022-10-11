@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { signinHelper } from '../../test/authHelper';
+import { generateId, signinHelper } from '../../test/authHelper';
 import request from 'supertest';
 import app from '../../app';
 import Order, { OrderStatus } from '../../models/order';
@@ -17,6 +17,7 @@ it('should returns an error if the ticket does not exist', async () => {
 
 it('should returns an error if the ticket is already reserved', async () => {
   const ticket = Ticket.build({
+    id: generateId(),
     title: 'concert',
     price: 20,
   });
@@ -37,6 +38,7 @@ it('should returns an error if the ticket is already reserved', async () => {
 
 it('should reserves a ticket', async () => {
   const ticket = Ticket.build({
+    id: generateId(),
     title: 'concert',
     price: 20,
   });
@@ -50,6 +52,7 @@ it('should reserves a ticket', async () => {
 
 it('should emits an order created event', async () => {
   const ticket = Ticket.build({
+    id: generateId(),
     title: 'concert',
     price: 20,
   });

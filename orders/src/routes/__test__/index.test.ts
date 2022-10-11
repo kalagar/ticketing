@@ -1,10 +1,11 @@
 import { Ticket } from '../../models/ticket';
-import { signinHelper } from '../../test/authHelper';
+import { generateId, signinHelper } from '../../test/authHelper';
 import request from 'supertest';
 import app from '../../app';
 
 const buildTicket = async () => {
   const ticket = Ticket.build({
+    id: generateId(),
     title: 'concert',
     price: 20,
   });

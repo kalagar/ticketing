@@ -1,4 +1,4 @@
-import { signinHelper } from '../../test/authHelper';
+import { generateId, signinHelper } from '../../test/authHelper';
 import request from 'supertest';
 import app from '../../app';
 import Order, { OrderStatus } from '../../models/order';
@@ -8,6 +8,7 @@ import { natsWrapper } from '../../nats-wrapper';
 it('marks an order as cancelled', async () => {
   // Create a ticket with Ticket Model
   const ticket = Ticket.build({
+    id: generateId(),
     title: 'concert',
     price: 20,
   });
@@ -38,6 +39,7 @@ it('marks an order as cancelled', async () => {
 it('emits an order cancelled event', async () => {
   // Create a ticket with Ticket Model
   const ticket = Ticket.build({
+    id: generateId(),
     title: 'concert',
     price: 20,
   });

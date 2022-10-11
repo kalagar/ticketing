@@ -22,3 +22,7 @@ export const signinHelper = () => {
   // return a string that's the cookie with the encoded data
   return [`session=${base64}`];
 };
+
+export const generateId = () => {
+  return new mongoose.Types.ObjectId().toHexString();
+};
