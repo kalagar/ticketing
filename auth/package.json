@@ -7,7 +7,8 @@
     "start": "ts-node-dev --poll src/index.ts",
     "fix": "eslint --fix",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx}'",
-    "test": "jest --watchAll --no-cache"
+    "test": "jest --watchAll --no-cache",
+    "test:ci": "jest"
   },
   "jest": {
     "preset": "ts-jest",
